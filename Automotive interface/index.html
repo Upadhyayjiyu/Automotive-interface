@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced Automotive Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <div class="dashboard">
+    <header>
+      <h1>SmartDrive Dashboard</h1>
+    </header>
+
+    <section class="speedometer">
+      <div class="dial">
+        <div class="needle" id="needle"></div>
+        <div class="center"></div>
+      </div>
+      <p class="speed-readout"><span id="speedValue">72</span> km/h</p>
+    </section>
+
+    <section class="status-indicators">
+      <div>Gear: <strong>D</strong></div>
+      <div>Turn: <strong id="turnSignal">➡</strong></div>
+    </section>
+
+    <section class="gauges">
+      <div class="gauge fuel">
+        <h2>Fuel</h2>
+        <p>58%</p>
+      </div>
+      <div class="gauge temp">
+        <h2>Engine Temp</h2>
+        <p>90°C</p>
+      </div>
+      <div class="gauge tire">
+        <h2>Tire Pressure</h2>
+        <p>32 PSI</p>
+      </div>
+    </section>
+
+    <section class="map">
+      <h2>Navigation</h2>
+      <div id="map"></div>
+    </section>
+
+    <section class="controls">
+      <button id="acBtn">AC Off</button>
+      <button id="mediaBtn">Media Off</button>
+      <button id="lightBtn">Light Off</button>
+    </section>
+
+    <section class="voice">
+      <h3>Voice Assistant</h3>
+      <button id="startVoice">🎤 Start Listening</button>
+      <div id="voiceLog"></div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 SmartDrive Systems</p>
+    </footer>
+  </div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
